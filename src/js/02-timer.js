@@ -76,7 +76,7 @@ class Timer {
       minutesEl.textContent = components.minutes;
       hoursEl.textContent = components.hours;
       daysEl.textContent = components.days;
-    });
+    }, 1000);
   }
 }
 
