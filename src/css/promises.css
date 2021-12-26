@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+}
+
+.form-col {
+  flex-direction: column;
+  padding-right: 30px;
+  width: 160px;
+}
+
+.click {
+  width: 120px;
+  height: 25px;
+  border-radius: 4px;
+  margin-top: 14px;
+}
