@@ -9,7 +9,7 @@ const hoursEl = document.querySelector('span[data-hours]');
 const minutesEl = document.querySelector('span[data-minutes]');
 const secondsEl = document.querySelector('span[data-seconds]');
 
-buttonEl.classList.add('readout');
+buttonEl.classList.add('disabled');
 let userDate = null;
 
 function addLeadingZero(value) {
@@ -49,8 +49,8 @@ const options = {
       Notify.failure('Please choose a date in the future');
       userDate = new Date();
     } else {
-      buttonEl.readout = false;
-      buttonEl.classList.remove('readout');
+      buttonEl.disabled = false;
+      buttonEl.classList.remove('disabled');
       userDate = selectedDates[0];
     }
   },
@@ -60,7 +60,7 @@ class Timer {
   constructor() {
     this.isActive = false;
     this.timerId = null;
-    buttonEl.readout = true;
+    buttonEl.disabled = true;
   }
   timerStart() {
     if (this.isActive) {

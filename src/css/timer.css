@@ -28,7 +28,7 @@ button {
   background-color: green;
 }
 
-.readout {
+.disabled {
   background-color: red;
   color: black;
 }
