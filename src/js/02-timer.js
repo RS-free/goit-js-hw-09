@@ -50,6 +50,7 @@ const options = {
       userDate = new Date();
     } else {
       buttonEl.disabled = false;
+      inputEl.disabled = true;
       buttonEl.classList.remove('disabled');
       userDate = selectedDates[0];
     }

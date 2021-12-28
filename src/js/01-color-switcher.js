@@ -3,24 +3,19 @@ const btnStop = document.querySelector('button[data-stop]');
 const body = document.querySelector('body');
 
 let bodyTimerBg = null;
-const intervalDuration = 1000;
-btnStart.disabled = false;
-btnStop.disabled = true;
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function updBgColor() {
-  body.style.backgroundColor = getRandomHexColor();
-}
-
 btnStart.addEventListener('click', onBtnStart);
 
 function onBtnStart() {
-  bodyTimerBg = setInterval(updBgColor, intervalDuration);
   btnStart.disabled = true;
   btnStop.disabled = false;
+  bodyTimerBg = setInterval(() => {
+    body.style.backgroundColor = getRandomHexColor();
+  }, 1000);
 }
 
 btnStop.addEventListener('click', onBtnStop);
